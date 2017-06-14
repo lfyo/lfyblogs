@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>lfyBlogs -- 一个站在web前端设计之路的小菜鸟</title>
+		<meta name="keywords" content="个人博客,卢方勇个人博客,个人作品,lfy" />
+		<meta name="description" content="lfyBlogs，是一个站在web前端设计之路的小菜鸟，提供个人做平的展现品台。" />
+		<link rel="stylesheet" type="text/css" href="lib/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="shortcut icon" type="image/x-icon" href="lfy_icon.ico" />
+		<link rel="stylesheet" type="text/css" href="css/model.css"/>
+		
+	</head>
+	<body>
+		<header class="container clearfix">
+			<div class="logo fl">
+				<a href="#"></a>
+			</div>
+			<nav class="topnav fr">
+				<ul>
+					<li><a href="index.html">首页</a></li>
+					<li><a href="">前端技术</a></li>
+					<li><a href="">后端程序</a></li>
+					<li><a href="">授人以渔</a></li>
+					<li><a href="">程序人生</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- 文章 侧边栏 -->
+		<div class="container clearfix">
+			<!-- 详细内容  -->
+			<div class="content fl">
+				<header class="article-header">
+				    <h1 class="article-title"><a href="article.html" draggable="false">php如何判断一个日期的格式是否正确</a></h1>
+				    <div class="article-meta">
+				        <span class="item article-meta-time">
+				          <time class="time">
+					          <i class="glyphicon glyphicon-time"></i> 
+					          2016-1-4 10:29:39
+				          </time>
+				          </span>
+				        <span class="item article-meta-source">
+					        <i class="glyphicon glyphicon-globe"></i> 
+					        第一PHP社区
+				        </span>
+				        <span class="item article-meta-category">
+					        <i class="glyphicon glyphicon-list"></i> 
+					        <a href="program" title="" draggable="false">后端程序</a>
+				        </span>
+				        <span class="item article-meta-views">
+					        <i class="glyphicon glyphicon-eye-open"></i> 
+					        共120人围观
+				        </span>
+				        <span class="item article-meta-comment">
+					        <i class="glyphicon glyphicon-comment"></i>
+					         0个不明物体
+					    </span>
+				    </div>
+				</header>
+				<article class="article-content">
+				    <p>
+				        <img src="images/banner/banner_03.jpg" alt="" style="display: block;">
+				    </p>
+				    <p> 用php获取上个月最后一天的时间，有两种方法，都非常简单，详细实现源码如下： </p>
+				    <pre class="prettyprint lang-php">
+&lt;?php
+  date_default_timezone_set("PRC"); //设置时区
+  //方法一
+  $times = date("d") * 24 * 3600;
+  echo date("Y-m-d H:i:s", time()-$times);
+  echo '&lt;br/&gt;';
+  //方法二
+  $day = date('d');
+  echo date("Y-m-d H:i:s", strtotime(-$day.' day'));
+?&gt;
+				   </pre>
+				    <p> 方法一是利用当前时间离本月初有多少时间，然后用当前时间减去这个时间差，就可以得到上月最后一天了。
+				     </p>
+				    <p> 方法二是先计算本月多少号，即离月初有多少天，然后用strtotime计算出$day天前的时间戳，也可以得到上个月的最后一天。 </p>
+				    <p class="article-copyright hidden-xs">未经允许不得转载：<a href="" >异清轩博客</a> » <a href="article.html" >php如何判断一个日期的格式是否正确</a></p>
+				</article>
+				<div class="article-tags">
+					标签：
+					<a href="" rel="tag" draggable="false">PHP</a>
+				</div>
+				<div class="title" id="comment">
+		        	<h3>评论 <small>抢沙发</small></h3>
+		     	 </div>
+				<div id="respond">
+			        <form action="" method="post" id="comment-form">
+			          <div class="comment">
+			            
+			            <div class="comment-box">
+			              <textarea placeholder="您的评论可以一针见血" name="comment" id="comment-textarea" cols="100%" rows="3" tabindex="1"></textarea>
+			              <div class="comment-ctrl"> 
+			                <div class="comment-prompt"> <i class="fa fa-spin fa-circle-o-notch"></i> <span class="comment-prompt-text"></span> </div>
+			                <input type="hidden" value="1" class="articleid">
+			                <button type="submit" name="comment-submit" id="comment-submit" tabindex="5" articleid="1">评论</button>
+			              </div>
+			            </div>
+			          </div>
+			        </form>
+			    </div>
+			<div id="postcomments">
+			    <ol class="commentlist">
+			        <li class="comment-content"><span class="comment-f">#1</span>
+			            <div class="comment-avatar"><img class="avatar" src="img/uicon.jpg" alt="" draggable="false"></div>
+			            <div class="comment-main">
+			                <p>来自<span class="address">湖北赤壁</span>的用户<span class="time">(2016-01-06)</span>
+			                    <br> 这是匿名评论的内容这是匿名评论的内容，这是匿名评论的内容这是匿名评论的内容这是匿名评论的内容这是匿名评论的内容这是匿名评论的内容这是匿名评论的内容。
+			                </p>
+			            </div>
+			        </li>
+			    </ol>
+			    <div class="quotes"><span class="disabled">首页</span><span class="disabled">上一页</span><a class="current" draggable="false">1</a><a href="" draggable="false">2</a><span class="disabled">下一页</span><span class="disabled">尾页</span></div>
+			</div>
+				
+			</div>
+			
+
+			<!-- 侧边栏 -->
+			<div class="side fr">
+				<div class="widget widget-tabs">
+				    <ul class="nav nav-tabs" role="tablist">
+				       <li class="active" date-controls="notice"><a href="#" >网站公告</a></li>
+				       <li  date-controls="centre"><a href="#" >会员中心</a></li>
+				       <li  date-controls="contact"><a href="#" >联系站长</a></li>
+				    </ul>
+				    <div class="tab-content">
+				        <div role="tabpanel" class="tab-pane notice active" id="notice">
+				            <ul>
+				                <li>
+				                    <time datetime="2016-01-04">01-04</time>
+				                    <a href="" target="_blank" draggable="false">欢迎访问lfyblogs</a></li>
+				                <li>
+				                    <time datetime="2016-01-04">01-04</time>
+				                    <a target="_blank" href="" draggable="false">在这里可以看到前端技术，后端程序，网站内容管理系统等文章，还有我的程序人生！</a></li>
+				                <li>
+				                    <time datetime="2016-01-04">01-04</time>
+				                    <a target="_blank" href="" draggable="false">在这个小工具中最多可以调用五条</a></li>
+				            </ul>
+				        </div>
+				        <div role="tabpanel" class="tab-pane centre" id="centre">
+				            <h4>需要登录才能进入会员中心</h4>
+				            <p> <a data-toggle="modal" data-target="#loginModal" class="btn btn-primary" draggable="false">立即登录</a> <a href="javascript:;" class="btn btn-default" draggable="false">现在注册</a> </p>
+				        </div>
+				        <div role="tabpanel" class="tab-pane contact" id="contact">
+				            <div class="links-of-author motion-element" style="opacity: 1; display: block; transform: translateX(0px);">
+							    <span class="links-of-author-item">
+					                <a href="https://github.com/lfyo" title="GitHub">
+					                  GitHub
+					                </a>
+							     </span>
+							    <span class="links-of-author-item">
+					                <a href="http://www.cnblogs.com/Levo/
+					                	"  title="cnblogs">
+					                  	博客园
+					                </a>
+							    </span>
+							    <span class="links-of-author-item">
+					                <a href="http://www.jianshu.com/u/d23b7110e592"  title="Email">
+					                  Email
+					                </a>
+							    </span>
+							</div>
+				        </div>
+				    </div>
+				</div>
+
+				<div class="widget widget_search">
+				    <form class="navbar-form" action="" method="post">
+				        <div class="input-group">
+				            <input type="text" name="keyword" class="form-control" size="35" placeholder="请输入关键字" maxlength="15" autocomplete="off">
+				            <span class="input-group-btn">
+				            <button class="btn btn-default btn-search" name="search" type="button">搜索</button>
+				            </span> </div>
+				    </form>
+				</div>
+				<div class="widget widget_sentence">
+				    <h3>每日一句</h3>
+				    <div id="time" class="widget-sentence-content">
+				        <h4>2016年01月05日星期二</h4>
+				        <p>Do not let what you cannot do interfere with what you can do.
+				            <br> 别让你不能做的事妨碍到你能做的事。（John Wooden）</p>
+				    </div>
+				</div>
+				<div class="widget widget_hot">
+				    <h3>热门文章</h3>
+				    <ul>
+				        <li>
+				        	<a href="javascript:void(0)" draggable="false">
+				        		<span class="thumbnail">
+				        			<img class="thumb" src="img/news/t001.png" alt="">
+				        		</span>
+				        		<span class="text">实习生，你来实习到底来做什么？</span>
+				        		<span class="muted">
+				        			<i class="glyphicon glyphicon-time"></i> 2017-3-4 
+				        		</span>
+				        		<span class="muted">
+				        			<i class="glyphicon glyphicon-eye-open"></i> 820
+				        		</span>
+				        	</a>
+				        </li>
+				   		 <li>
+				        	<a href="javascript:void(0)" draggable="false">
+				        		<span class="thumbnail">
+				        			<img class="thumb" src="img/news/t002.jpg" alt="">
+				        		</span>
+				        		<span class="text">【效果】JavaScript 360度全景图片浏览</span>
+				        		<span class="muted">
+				        			<i class="glyphicon glyphicon-time"></i> 2017-1-4 
+				        		</span>
+				        		<span class="muted">
+				        			<i class="glyphicon glyphicon-eye-open"></i> 320
+				        		</span>
+				        	</a>
+				        </li>
+				         <li>
+				        	<a href="javascript:void(0)" draggable="false">
+				        		<span class="thumbnail">
+				        			<img class="thumb" src="img/news/t003.png" alt="">
+				        		</span>
+				        		<span class="text">基于 vue2 + element-ui 构建的后台管理系统</span>
+				        		<span class="muted">
+				        			<i class="glyphicon glyphicon-time"></i> 2017-02-12
+				        		</span>
+				        		<span class="muted">
+				        			<i class="glyphicon glyphicon-eye-open"></i> 720
+				        		</span>
+				        	</a>
+				        </li>
+				        <li>
+				        	<a href="javascript:void(0)" draggable="false">
+				        		<span class="thumbnail">
+				        			<img class="thumb" src="img/news/t004.jpg" alt="">
+				        		</span>
+				        		<span class="text">后台:nodejs 前台:vue 全栈项目源码分享</span>
+				        		<span class="muted">
+				        			<i class="glyphicon glyphicon-time"></i> 2017-06-03
+				        		</span>
+				        		<span class="muted">
+				        			<i class="glyphicon glyphicon-eye-open"></i> 1020
+				        		</span>
+				        	</a>
+				        </li>
+				    </ul>
+				</div>
+
+			</div>
+		</div>
+		<!-- footer-->
+		<footer class="container footer">
+			 <!--Design by lfy -->Copyright © 2017 lfyblogs
+		</footer>
+		<script src="lib/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/myjs.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

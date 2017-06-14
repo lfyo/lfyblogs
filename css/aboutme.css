@@ -1,0 +1,64 @@
+.about-con {
+	
+}
+.about-con h1 {
+	margin-top: 20px;
+	border-bottom: 1px solid #B4BBBF;
+}
+.about-con h1 a {
+	display: inline-block;
+	width: 100px;
+	line-height: 40px;
+	text-align: center;
+	float: left;
+	background: #5EA51B;
+	border: 1px solid #099B43;
+	font-size: 18px;
+	color: #FFFFFF;
+}
+.about-con h1 a.active {
+	background: #8BBF5D;
+}
+.about-con h1 span {
+	float: right;
+	font-size: 12px;
+	line-height: 40px;
+}
+.about-con .about-left {
+	background: url(../img/h_line.jpg) repeat-y right top;
+	width: 70%;
+}
+.about-con .about-left h2 {
+	font-size: 18px;
+	line-height: 60px;
+}
+.about-con .about-left p {
+	text-indent: 2em;
+	padding: 10px 10px 20px 20px;
+	font-size: 14px;
+}
+.right {
+	padding: 20px 10px 0 20px;
+	width: 25%;
+}
+.right .me {
+	
+}
+.right .me p {
+	font-size: 14px;
+	line-height: 25px;
+}
+.right .me .github {
+	margin-top: 10px;
+	height: 40px;
+	background: url(../img/githu.png) no-repeat;
+	margin-bottom: 10px;
+}
+.right .me .github a {
+	display: inline-block;
+	width: 150px;
+	height: 40px;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 40px;
+}
